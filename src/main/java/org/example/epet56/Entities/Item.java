@@ -2,7 +2,6 @@ package org.example.epet56.Entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 /**
  * Representa un artículo (item) en la tienda.
@@ -11,11 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document(collection = "store")
 public class Item {
     /**
-     * Identificador único del artículo, mapeado al campo "_id" en MongoDB.
+     * Identificador único del artículo.
+     * Mapeado al campo "_id" en la base de datos MongoDB.
      */
     @Id
-    @Field("id")
-    private String id;
+    private String _id;
     /** Título o nombre del artículo. */
     private String title;
     /** Precio del artículo. */
@@ -45,17 +44,17 @@ public class Item {
 
     /**
      * Constructor para crear un Item con ID y categoría.
-     * @param id El identificador único del artículo.
+     * @param _id El identificador único del artículo.
      * @param category La categoría del artículo.
      */
-    public Item(String id, String category) {
-        this.id = id;
+    public Item(String _id, String category) {
+        this._id = _id;
         this.category = category;
     }
 
     /**
      * Constructor completo para crear un Item con todos sus atributos.
-     * @param id Identificador único.
+     * @param _id Identificador único.
      * @param title Título del artículo.
      * @param price Precio del artículo.
      * @param category Categoría del artículo.
@@ -67,8 +66,8 @@ public class Item {
      * @param ean Código EAN.
      * @param image URL de la imagen.
      */
-    public Item(String id, String title, Double price, String category, String description, double rate, int count, String color, String manufacturer, int ean, String image) {
-        this.id = id;
+    public Item(String _id, String title, Double price, String category, String description, double rate, int count, String color, String manufacturer, int ean, String image) {
+        this._id = _id;
         this.title = title;
         this.price = price;
         this.category = category;
@@ -85,16 +84,16 @@ public class Item {
      * Obtiene el ID del artículo.
      * @return El ID del artículo.
      */
-    public String getId() {
-        return id;
+    public String get_id() {
+        return _id;
     }
 
     /**
      * Establece el ID del artículo.
-     * @param id El nuevo ID del artículo.
+     * @param _id El nuevo ID del artículo.
      */
-    public void setId(String id) {
-        this.id = id;
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
     /**
