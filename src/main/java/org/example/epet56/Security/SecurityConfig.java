@@ -1,4 +1,4 @@
-package org.example.reto4.Security;
+package org.example.epet56.Security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,13 +34,10 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 // Configura las reglas de autorización para las peticiones HTTP.
                 .authorizeHttpRequests(auth -> auth
-                        // Permite peticiones GET a /hoteles y /reservas sin autenticación.
-                        .requestMatchers(HttpMethod.GET, "/hoteles/**", "/reservas/**").permitAll()
-                        // Requiere rol 'ADMIN' para peticiones POST a /hoteles y /reservas.
-                        .requestMatchers(HttpMethod.POST, "/hoteles/**", "/reservas/**").hasRole("ADMIN")
-                        // Requiere rol 'ADMIN' para peticiones PUT a /hoteles.
-                        .requestMatchers(HttpMethod.PUT, "/hoteles/**").hasRole("ADMIN")
-                        // Cualquier otra petición requiere autenticación.
+                        .requestMatchers(HttpMethod.GET, "/store/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/store/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/store/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/store/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 // Habilita la autenticación básica HTTP.

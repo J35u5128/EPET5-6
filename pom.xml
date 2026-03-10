@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>Reto4</artifactId>
+    <artifactId>EPET5-6</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Reto4</name>
     <description>Reto4</description>
@@ -91,6 +91,8 @@
                             <artifactId>lombok</artifactId>
                         </path>
                     </annotationProcessorPaths>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
             <plugin>

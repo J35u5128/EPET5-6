@@ -1,13 +1,13 @@
-package org.example.reto4;
+package org.example.epet56;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Reto4Application {
+public class Epet56Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Reto4Application.class, args);
+        SpringApplication.run(Epet56Application.class, args);
     }
 
 }

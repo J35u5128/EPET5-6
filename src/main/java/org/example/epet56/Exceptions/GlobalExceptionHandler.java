@@ -1,4 +1,4 @@
-package org.example.reto4.Exceptions;
+package org.example.epet56.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

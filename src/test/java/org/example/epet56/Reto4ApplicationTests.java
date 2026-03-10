@@ -1,10 +1,10 @@
-package org.example.reto4;
+package org.example.epet56;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Reto4ApplicationTests {
+class epet56ApplicationTests {
 
     @Test
     void contextLoads() {
